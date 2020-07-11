@@ -10,8 +10,19 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
+/**
+ * Subscribe to Item and Block registry
+ *
+ */
+
 @EventBusSubscriber(modid = Mod1.MODID, bus = EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber {
+
+    /**
+     * Subscribe to ItemRegistry
+     *
+     * @param event the Item Registry Event
+     */
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
         Item orangeIngot = setup(new Item(
@@ -22,6 +33,11 @@ public final class ModEventSubscriber {
         //);
     }
 
+    /**
+     * Subscribe to BlockRegistry
+     *
+     * @param event the Block Registry Event
+     */
     @SubscribeEvent
     public static void onRegisterBlocks(RegistryEvent.Register<Block> event) {
         Block orangeBlock = setup(new Block(
@@ -39,5 +55,4 @@ public final class ModEventSubscriber {
         entry.setRegistryName(registryName);
         return entry;
     }
-
 }

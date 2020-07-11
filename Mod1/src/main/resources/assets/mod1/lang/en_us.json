@@ -1,4 +1,6 @@
 {
   "item.mod1.orange_ingot": "Orange Ingot",
-  "itemGroup.mod1": "Mod 1"
+  "itemGroup.mod1": "Mod 1",
+
+  "block.mod1.orange_block": "Orange Block"
 }
