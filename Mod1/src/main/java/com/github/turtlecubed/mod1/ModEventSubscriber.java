@@ -1,5 +1,6 @@
 package com.github.turtlecubed.mod1;
 
+import com.github.turtlecubed.mod1.init.ModItemGroups;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -11,7 +12,8 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 public final class ModEventSubscriber {
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
-        Item newIngot = setup(new Item(new Item.Properties()), "orange_ingot");
+        Item newIngot = setup(new Item(
+                new Item.Properties().group(ModItemGroups.ITEM_GROUP)), "orange_ingot");
         event.getRegistry().registerAll(newIngot);
         //event.getRegistry().registerAll(
         //        setup(new Item(new Item.Properties()), "orange_ingot")
